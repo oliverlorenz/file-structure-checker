@@ -1,0 +1,48 @@
+{
+  "name": "file-structure-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx typescript -w",
+    "start": "node .build/index.js",
+    "generate-schema": "npx typescript-json-schema Interfaces.ts YamlStructure > jsonschema.json",
+    "postinstall": "npx typescript"
+  },
+  "author": "Oliver Lorenz <mail@oliverlorenz.com>",
+  "license": "MIT",
+  "bin": {
+    "file-structure-checker": ".bin/fs-check"
+  },
+  "dependencies": {
+    "ajv": "^6.12.0",
+    "chalk": "^3.0.0",
+    "commander": "^5.0.0",
+    "es6-template-strings": "^2.0.1",
+    "source-map-support": "^0.5.16",
+    "typescript-json-schema": "^0.42.0",
+    "yaml": "^1.8.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^8.1.0",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.9.5",
+    "@types/yaml": "^1.2.0",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix"
+  }
+}
