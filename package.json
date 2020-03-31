@@ -1,6 +1,6 @@
 {
   "name": "file-structure-checker",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "This tool lets you easily check if a certain file and folder structure is present. The structure to be checked can be configured via a yaml file.",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "Oliver Lorenz <mail@oliverlorenz.com>",
   "license": "MIT",
   "bin": {
-    "file-structure-checker": ".bin/fs-check"
+    "file-structure-checker": ".build/index.js"
   },
   "dependencies": {
     "ajv": "^6.12.0",
