@@ -11,7 +11,7 @@ import * as template from 'es6-template-strings';
 
 // eslint-disable-next-line
 import * as Interfaces from './Interfaces';
-import { version } from './package.json';
+const version = '1.1.2';
 
 function printOverallResult(overallResult) {
   if (overallResult.checksFailed) {
