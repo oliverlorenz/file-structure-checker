@@ -8,7 +8,7 @@ This tool lets you easily check if a certain file and folder structure is presen
 npm install -g file-structure-checker
 ```
 
-create a `.file-system-checker.yml` file in a directory you want to check. example:
+create a `.file-structure-checker.yml` file in a directory you want to check. example:
 
 ```
 vars:

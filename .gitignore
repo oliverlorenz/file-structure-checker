@@ -1,5 +1,5 @@
 .git
 .build
-.file-system-checker.yml
+.file-structure-checker.yml
 .eslintcache
 node_modules
