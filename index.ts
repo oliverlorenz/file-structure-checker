@@ -8,6 +8,8 @@ import * as yaml from 'yaml';
 import * as chalk from 'chalk';
 import * as Ajv from 'ajv';
 import * as template from 'es6-template-strings';
+
+// eslint-disable-next-line
 import * as Interfaces from './Interfaces';
 import { version } from './package.json';
 
@@ -160,7 +162,7 @@ program
   .parse(process.argv);
 
 program.workingDir = program.workingDir || process.cwd();
-program.configfile = program.configfile || '.file-system-checker.yml';
+program.configfile = program.configfile || '.file-structure-checker.yml';
 
 const fullConfigPath = path.join(
   program.program.workingDir,
