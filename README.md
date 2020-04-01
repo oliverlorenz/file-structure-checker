@@ -53,3 +53,9 @@ $ file-structure-checker
 result:
  ✓ 4 ✕ 4
 ```
+
+# docker
+
+```
+docker run -it --rm -v $(pwd):/volume oliverlorenz/file-structure-checker
+```
