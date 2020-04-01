@@ -13,7 +13,7 @@
   "author": "Oliver Lorenz <mail@oliverlorenz.com>",
   "license": "MIT",
   "bin": {
-    "file-structure-checker": ".build/index.js"
+    "file-structure-checker": ".build/cli.js"
   },
   "dependencies": {
     "ajv": "^6.12.0",
