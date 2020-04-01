@@ -8,6 +8,7 @@ import * as yaml from 'yaml';
 import * as chalk from 'chalk';
 import * as Ajv from 'ajv';
 import * as template from 'es6-template-strings';
+import schema from './Schema.ts';
 
 // eslint-disable-next-line
 import * as Interfaces from './Interfaces';
@@ -35,9 +36,6 @@ function printOverallResult(overallResult) {
 }
 
 function checkYamlFile(yamlObject: Interfaces.YamlStructure) {
-  const schema = JSON.parse(
-    fs.readFileSync('./jsonschema.json').toString(),
-  );
   const ajv = new Ajv();
   const validate = ajv.compile(schema);
   const valid = validate(yamlObject);
