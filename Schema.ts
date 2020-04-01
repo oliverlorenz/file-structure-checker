@@ -1,50 +1,46 @@
 export default {
-  $schema: 'http://json-schema.org/draft-07/schema#',
+  $schema: "http://json-schema.org/draft-07/schema#",
   definitions: {
     FsResource: {
       properties: {
         children: {
           items: {
-            $ref: '#/definitions/FsResource',
+            $ref: "#/definitions/FsResource"
           },
-          type: 'array',
+          type: "array"
         },
         generateChildren: {
           items: {
-            $ref: '#/definitions/FsResource',
+            $ref: "#/definitions/FsResource"
           },
-          type: 'array',
+          type: "array"
         },
         list: {
-          type: 'string',
+          type: "string"
         },
         name: {
-          type: 'string',
+          type: "string"
         },
         type: {
-          $ref: '#/definitions/FsResourceType',
-        },
+          $ref: "#/definitions/FsResourceType"
+        }
       },
-      type: 'object',
+      type: "object"
     },
     FsResourceType: {
-      enum: [
-        'directory',
-        'file',
-      ],
-      type: 'string',
-    },
+      enum: ["directory", "file"],
+      type: "string"
+    }
   },
   properties: {
     structure: {
-      $ref: '#/definitions/FsResource',
+      $ref: "#/definitions/FsResource"
     },
     vars: {
       additionalProperties: true,
-      properties: {
-      },
-      type: 'object',
-    },
+      properties: {},
+      type: "object"
+    }
   },
-  type: 'object',
+  type: "object"
 };
