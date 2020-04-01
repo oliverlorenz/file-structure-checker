@@ -1,35 +1,35 @@
 /* eslint-disable no-unused-vars */
 
 export interface YamlStructure {
-    vars: object
-    structure: FsResource
+  vars: object;
+  structure: FsResource;
 }
 
 export interface FsResource {
-    name: string;
-    type: FsResourceType;
-    children?: FsResource[];
-    generateChildren?: FsResource[];
-    list?: string
+  name: string;
+  type: FsResourceType;
+  children?: FsResource[];
+  generateChildren?: FsResource[];
+  list?: string;
 }
 
 export interface Directory extends FsResource {
-    children: FsResource[];
+  children: FsResource[];
 }
 
 export const enum FsResourceType {
-    FILE = 'file',
-    DIRECTORY = 'directory'
+  FILE = "file",
+  DIRECTORY = "directory"
 }
 
 export interface Check {
-    name: string;
-    result: boolean;
+  name: string;
+  result: boolean;
 }
 
 export interface ResourceCheckResult {
-    name: string,
-    level: number,
-    checks: Check[],
-    children?: ResourceCheckResult[],
+  name: string;
+  level: number;
+  checks: Check[];
+  children?: ResourceCheckResult[];
 }
